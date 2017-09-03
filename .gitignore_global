@@ -1,0 +1,7 @@
+*.swp
+*.swo
+*.swa
+.bundle
+.ruby-version
+.env
+.rspec

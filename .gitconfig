@@ -1,0 +1,12 @@
+[user]
+  name = Washington L Braga Jr
+  email = huoxito@gmail.com
+[alias]
+  st = status
+  g = grep --break --heading --line-number
+[core]
+  excludesfile = ~/.gitignore_global
+[color]
+  ui = auto
+[grep]
+  lineNumber = true
