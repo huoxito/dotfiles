@@ -21,6 +21,8 @@ source ~/.bash-git-prompt/gitprompt.sh
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
+synclient TouchpadOff=1
+
 # broke as of Ubuntu 17.04 => 17.10 upgrade
 # setxkbmap -option caps:ctrl_modifier
 
