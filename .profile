@@ -12,16 +12,22 @@ alias dynamodb="docker run --name dynamodb \
 export EDITOR=vim
 export DISABLE_SPRING=1
 
+export AWS_REGION=localhost
+export AWS_ACCESS_KEY_ID=huoxitoKey
+export AWS_SECRET_ACCESS_KEY=huoxitoSecrets
+
 # GIT_PROMPT_FETCH_REMOTE_STATUS=0
 GIT_PROMPT_ONLY_IN_REPO=1
 GIT_PROMPT_END_USER=" \n${ResetColor}$ "
 
 source ~/.bash-git-prompt/gitprompt.sh
 
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-synclient TouchpadOff=1
+# synclient TouchpadOff=1
 
 # broke as of Ubuntu 17.04 => 17.10 upgrade
 # setxkbmap -option caps:ctrl_modifier
@@ -32,3 +38,6 @@ synclient TouchpadOff=1
 
 
 # xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
