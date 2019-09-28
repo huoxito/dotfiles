@@ -10,3 +10,7 @@
   ui = auto
 [grep]
   lineNumber = true
+[commit]
+	gpgsign = true
+[push]
+	default = current
