@@ -2,17 +2,21 @@ alias arspec="bundle exec rspec"
 alias arake="bundle exec rake"
 
 alias old-branches="git branch --merged | egrep -v \"master|release/*\""
+alias rm-branch-references="git remote prune origin"
+alias clean-branches="git branch -vv | grep 'origin/.*: gone]' | awk '{print $2}' | xargs git branch"
+
+# shopt -s histappend
 
 export EDITOR=vim
 export DISABLE_SPRING=1
 
-export AWS_REGION=localhost
-export AWS_ACCESS_KEY_ID=huoxitoKey
-export AWS_SECRET_ACCESS_KEY=huoxitoSecrets
+# export AWS_REGION=localhost
+# export AWS_ACCESS_KEY_ID=huoxitoKey
+# export AWS_SECRET_ACCESS_KEY=huoxitoSecrets
 
 # GIT_PROMPT_FETCH_REMOTE_STATUS=0
 GIT_PROMPT_ONLY_IN_REPO=0
-# GIT_PROMPT_END_USER=" \n${ResetColor}$ "
+GIT_PROMPT_END=" \n${ResetColor}$ "
 GIT_PROMPT_THEME=Solarized
 
 if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
@@ -37,5 +41,5 @@ source /usr/local/share/chruby/auto.sh
 
 # xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
