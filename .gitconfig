@@ -5,7 +5,7 @@
   st = status
   g = grep --break --heading --line-number
 [core]
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/Coding/dotfiles/.gitignore_global
 [color]
   ui = auto
 [grep]
